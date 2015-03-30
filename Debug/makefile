@@ -30,38 +30,38 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 LSS += \
-VolumeRemoteAT90.lss \
+VolumeRemote.lss \
 
 SIZEDUMMY += \
 sizedummy \
 
 
 # All Target
-all: VolumeRemoteAT90.elf secondary-outputs
+all: VolumeRemote.elf secondary-outputs
 
 # Tool invocations
-VolumeRemoteAT90.elf: $(OBJS) $(USER_OBJS)
+VolumeRemote.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,VolumeRemoteAT90.map -mmcu=at90can128 -o"VolumeRemoteAT90.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,VolumeRemote.map -mmcu=atmega168 -o"VolumeRemote.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-VolumeRemoteAT90.lss: VolumeRemoteAT90.elf
+VolumeRemote.lss: VolumeRemote.elf
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S VolumeRemoteAT90.elf  >"VolumeRemoteAT90.lss"
+	-avr-objdump -h -S VolumeRemote.elf  >"VolumeRemote.lss"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: VolumeRemoteAT90.elf
+sizedummy: VolumeRemote.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=at90can128 VolumeRemoteAT90.elf
+	-avr-size --format=avr --mcu=atmega168 VolumeRemote.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(ASM_DEPS)$(ELFS)$(LSS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS) VolumeRemoteAT90.elf
+	-$(RM) $(OBJS)$(C_DEPS)$(ASM_DEPS)$(ELFS)$(LSS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS) VolumeRemote.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(SIZEDUMMY)

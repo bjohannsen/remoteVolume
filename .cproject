@@ -39,6 +39,9 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.932875999" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.linker.winavr.app.debug.1307060505" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.app.debug">
+								<option id="de.innot.avreclipse.linker.option.libs.1588656380" superClass="de.innot.avreclipse.linker.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="m"/>
+								</option>
 								<inputType id="de.innot.avreclipse.tool.linker.input.1595311116" name="OBJ Files" superClass="de.innot.avreclipse.tool.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -613,7 +616,7 @@
 								<option id="de.innot.avreclipse.linker.option.libs.1849183314" name="Libraries (-l)" superClass="de.innot.avreclipse.linker.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="m"/>
 								</option>
-								<option id="de.innot.avreclipse.linker.option.libpath.445800408" name="Libraries Path (-L)" superClass="de.innot.avreclipse.linker.option.libpath" valueType="stringList"/>
+								<option id="de.innot.avreclipse.linker.option.libpath.445800408" name="Libraries Path (-L)" superClass="de.innot.avreclipse.linker.option.libpath"/>
 								<option id="de.innot.avreclipse.linker.option.otherlinkargs.1590860482" name="Other Arguments" superClass="de.innot.avreclipse.linker.option.otherlinkargs" value="" valueType="string"/>
 								<inputType id="de.innot.avreclipse.tool.linker.input.1153947070" name="OBJ Files" superClass="de.innot.avreclipse.tool.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

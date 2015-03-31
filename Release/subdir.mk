@@ -9,7 +9,9 @@ C_SRCS += \
 ../irmpextlog.c \
 ../leds.c \
 ../main.c \
+../motorpot.c \
 ../pga.c \
+../receiver.c \
 ../spi.c 
 
 OBJS += \
@@ -18,7 +20,9 @@ OBJS += \
 ./irmpextlog.o \
 ./leds.o \
 ./main.o \
+./motorpot.o \
 ./pga.o \
+./receiver.o \
 ./spi.o 
 
 C_DEPS += \
@@ -27,7 +31,9 @@ C_DEPS += \
 ./irmpextlog.d \
 ./leds.d \
 ./main.d \
+./motorpot.d \
 ./pga.d \
+./receiver.d \
 ./spi.d 
 
 

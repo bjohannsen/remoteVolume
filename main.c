@@ -39,7 +39,6 @@ uint8_t _state = 0x0;
 uint8_t _flags = 0x0;
 uint8_t _submute_counter = 0;
 uint8_t _gain_level = GAIN_STARTUP_STEP;
-uint16_t _motor_target = 0;
 
 
 // IRMP Timer
@@ -49,25 +48,10 @@ ISR(COMPA_VECT)
   (void) irmp_ISR();
 }
 
-uint8_t get_adc_tolerance(uint16_t adc_value)
-{
-	double tolerance = (double)adc_value*ADC_TOLERANCE;
-	return (uint8_t) tolerance+1;
-}
-
 //// Timer Interrupt
 ISR(TIMER0_COMPA_vect)
 {
 	static uint8_t sw_timer=0;
-	uint16_t adc_value = adc_get_value(0);
-	uint8_t adc_tolerance = get_adc_tolerance(adc_value);
-
-	MOTOR_STOP;
-	if(adc_value > _motor_target+adc_tolerance) {
-		MOTOR_RUN_CW;
-	} else if( adc_value < _motor_target-adc_tolerance) {
-		MOTOR_RUN_CCW;
-	}
 
 	if(_submute_counter > 0)
 	{
@@ -82,6 +66,8 @@ ISR(TIMER0_COMPA_vect)
 		_flags |= FLAG_LED_ANIMATION;
 	}
 	sw_timer++;
+
+	_flags |= FLAG_CHECK_MOTOR_POSTION;
 }
 
 void update_pga_gain()
@@ -89,13 +75,6 @@ void update_pga_gain()
 	pga_set_gain(pga_get_gain_for_level(_gain_level));
 }
 
-void update_motor_target()
-{
-	double base = 0.62518 * (double)_gain_level;
-	_motor_target = pow(base, 2.55);
-}
-
-// toggles Mute Relay
 void toggle_mute()
 {
 	if(_state & STATE_MUTE)
@@ -158,23 +137,19 @@ void turn_volume_down()
 	}
 }
 
-
 void rx_led_callback(uint8_t on)
 {
 	leds_rx();
 }
 
-
 void init_io() {
-    MOTOR_DDR |= (MOTOR_A|MOTOR_B);
     RELAY_DDR |= (RELAY_SOURCE|RELAY_SUBMUTE);
 }
 
 void init_volume_timer() {
-	//Timer0, 8bit, Prescaler 1024
-	TCCR0A = (1<<WGM01); // CTC !
+	TCCR0A = (1<<WGM01);
 	TCCR0B |= (1<<CS02|1<<CS00);
-	OCR0A = 196; // Compare value = max, ca 10ms
+	OCR0A = 196;
 	TIMSK0 |= (1<<OCIE0A);
 }
 
@@ -186,6 +161,7 @@ uint8_t is_repetition(IRMP_DATA irmp_data)
 int main (void)
 {
     IRMP_DATA irmp_data;
+    motor_init();
     init_io();
     init_volume_timer();
     pga_init();
@@ -232,13 +208,18 @@ int main (void)
 
         if(_flags & FLAG_CALC_MOTOR_TARGET)
         {
-        	update_motor_target();
+        	motor_update_target(_gain_level);
         	_flags &= ~FLAG_CALC_MOTOR_TARGET;
         }
         else if(_flags & FLAG_LED_ANIMATION)
         {
     		leds_animate(_gain_level);
         	_flags &= ~FLAG_LED_ANIMATION;
+        }
+        else if(_flags & FLAG_CHECK_MOTOR_POSTION)
+        {
+        	motor_check_position(adc_get_value(0));
+        	_flags &= ~FLAG_CHECK_MOTOR_POSTION;
         }
     }
 }

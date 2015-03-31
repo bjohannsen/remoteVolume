@@ -113,8 +113,6 @@ void init_volume_timer() {
 
 int main (void)
 {
-    IRMP_DATA irmp_data;
-
     init_volume_timer();
     init_io();
 
@@ -131,31 +129,29 @@ int main (void)
 
     for(;;)
     {
-        if(irmp_get_data (&irmp_data))
+    	uint8_t command = receiver_get_command();
+        if(command)
         {
-        	if(receiver_is_source_valid(irmp_data))
+        	if(command == RECEIVER_COMMAND_VOLUME_UP)
         	{
-          		if(receiver_is_volume_up_command(irmp_data))
-            	{
-            		turn_volume_up();
-            	}
-            	else if(receiver_is_volume_down_command(irmp_data))
-            	{
-            		turn_volume_down();
-            	}
-            	else if(receiver_is_toggle_mute_command(irmp_data))
-        		{
-        			toggle_mute();
-        		}
-        		else if(receiver_is_toggle_subwoofer_command(irmp_data))
-        		{
-       				toggle_submute();
-        		}
-        		else if(receiver_is_toggle_source_command(irmp_data))
-        		{
-       				toggle_source();
-        		}
-          	}
+        		turn_volume_up();
+        	}
+        	else if(command == RECEIVER_COMMAND_VOLUME_DOWN)
+        	{
+        		turn_volume_down();
+        	}
+        	else if(command == RECEIVER_COMMAND_TOGGLE_MUTE)
+        	{
+        		toggle_mute();
+        	}
+        	else if(command == RECEIVER_COMMAND_TOGGLE_SUBWOOFER)
+        	{
+        		toggle_submute();
+        	}
+        	else if(command == RECEIVER_COMMAND_TOGGLE_SOURCE)
+        	{
+        		toggle_source();
+        	}
         }
 
         if(_flags & FLAG_CALC_MOTOR_TARGET)

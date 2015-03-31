@@ -1,7 +1,6 @@
 #ifndef VOLUMEREMOTE_H_
 #define VOLUMEREMOTE_H_
 
-#include "irmp.h"
 #include "receiver.h"
 #include "adc.h"
 #include "motorpot.h"

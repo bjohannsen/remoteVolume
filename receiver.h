@@ -17,12 +17,14 @@
 
 #define SAMSUNG_ADDRESS			0x0707
 
-void receiver_init ();
-uint8_t receiver_is_source_valid(IRMP_DATA irmp_data);
-uint8_t receiver_is_volume_up_command(IRMP_DATA irmp_data);
-uint8_t receiver_is_volume_down_command(IRMP_DATA irmp_data);
-uint8_t receiver_is_toggle_source_command(IRMP_DATA irmp_data);
-uint8_t receiver_is_toggle_subwoofer_command(IRMP_DATA irmp_data);
-uint8_t receiver_is_toggle_mute_command(IRMP_DATA irmp_data);
+#define RECEIVER_COMMAND_NONE				0x00
+#define RECEIVER_COMMAND_VOLUME_UP			0x01
+#define RECEIVER_COMMAND_VOLUME_DOWN		0x02
+#define RECEIVER_COMMAND_TOGGLE_MUTE		0x04
+#define RECEIVER_COMMAND_TOGGLE_SUBWOOFER	0x08
+#define RECEIVER_COMMAND_TOGGLE_SOURCE		0x10
+
+void receiver_init(void (*cb)(uint8_t));
+uint8_t receiver_get_command();
 
 #endif /* RECEIVER_H_ */

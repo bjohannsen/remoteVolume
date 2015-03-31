@@ -48,32 +48,61 @@ uint8_t is_repetition(IRMP_DATA irmp_data)
 	return (irmp_data.flags & IRMP_FLAG_REPETITION);
 }
 
-uint8_t receiver_is_source_valid(IRMP_DATA irmp_data)
+uint8_t is_source_valid(IRMP_DATA irmp_data)
 {
 	return (irmp_data.address == SAMSUNG_ADDRESS);
 }
 
-uint8_t receiver_is_volume_up_command(IRMP_DATA irmp_data)
+uint8_t is_volume_up_command(IRMP_DATA irmp_data)
 {
 	return (irmp_data.command == SAMSUNG_CMD_VOL_PLUS);
 }
 
-uint8_t receiver_is_volume_down_command(IRMP_DATA irmp_data)
+uint8_t is_volume_down_command(IRMP_DATA irmp_data)
 {
 	return (irmp_data.command == SAMSUNG_CMD_VOL_MINUS);
 }
 
-uint8_t receiver_is_toggle_source_command(IRMP_DATA irmp_data)
+uint8_t is_toggle_source_command(IRMP_DATA irmp_data)
 {
 	return (irmp_data.command == SAMSUNG_CMD_BACK || irmp_data.command == SAMSUNG_CMD_NEXT) && !is_repetition(irmp_data);
 }
 
-uint8_t receiver_is_toggle_subwoofer_command(IRMP_DATA irmp_data)
+uint8_t is_toggle_subwoofer_command(IRMP_DATA irmp_data)
 {
 	return (irmp_data.command == SAMSUNG_CMD_PAUSE && !is_repetition(irmp_data));
 }
 
-uint8_t receiver_is_toggle_mute_command(IRMP_DATA irmp_data)
+uint8_t is_toggle_mute_command(IRMP_DATA irmp_data)
 {
 	return (irmp_data.command == SAMSUNG_CMD_MUTE && !is_repetition(irmp_data));
+}
+
+uint8_t receiver_get_command()
+{
+	IRMP_DATA irmp_data;
+	if(irmp_get_data(&irmp_data) && is_source_valid(irmp_data))
+	{
+		if(is_volume_up_command(irmp_data))
+		{
+			return RECEIVER_COMMAND_VOLUME_UP;
+		}
+		else if(is_volume_down_command(irmp_data))
+		{
+			return RECEIVER_COMMAND_VOLUME_DOWN;
+		}
+		else if(is_toggle_mute_command(irmp_data))
+		{
+			return RECEIVER_COMMAND_TOGGLE_MUTE;
+		}
+		else if(is_toggle_subwoofer_command(irmp_data))
+		{
+			return RECEIVER_COMMAND_TOGGLE_SUBWOOFER;
+		}
+		else if(is_toggle_source_command(irmp_data))
+		{
+			return RECEIVER_COMMAND_TOGGLE_SOURCE;
+		}
+	}
+	return RECEIVER_COMMAND_NONE;
 }

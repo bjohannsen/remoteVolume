@@ -1,10 +1,8 @@
 /*
  * spi.h
  *
- *  Created on: 23.03.2014
- *      Author: BJO
+ * Author: dreimalb
  */
-
 #ifndef SPI_H_
 #define SPI_H_
 
@@ -14,10 +12,10 @@
 #define SPI_PORT 		PORTC
 #define SPI_DDR			DDRC
 
-#define SPI_PIN_SCL		(1<<PORTC2) //10
-#define SPI_PIN_SCK		(1<<PORTC3) //11
-#define SPI_PIN_RCK		(1<<PORTC4) //12
-#define SPI_PIN_SER		(1<<PORTC5) //14
+#define SPI_PIN_SCL		(1<<PORTC2)
+#define SPI_PIN_SCK		(1<<PORTC3)
+#define SPI_PIN_RCK		(1<<PORTC4)
+#define SPI_PIN_SER		(1<<PORTC5)
 
 #define SPI_SET_SER		(SPI_PORT |= SPI_PIN_SER)
 #define SPI_CLR_SER		(SPI_PORT &= ~(SPI_PIN_SER))
@@ -35,6 +33,5 @@
 
 void spi_write( uint16_t data, uint8_t size );
 void spi_init();
-
 
 #endif /* SPI_H_ */

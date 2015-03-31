@@ -1,8 +1,9 @@
 /*
  * leds.c
  *
- *  Created on: 23.03.2014
- *      Author: BJO
+ * Handling of front leds.
+ *
+ * Author: dreimalb
  */
 #include "leds.h"
 

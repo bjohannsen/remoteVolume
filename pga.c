@@ -1,8 +1,9 @@
 /*
  * pga.c
  *
- *  Created on: 05.07.2014
- *      Author: BJO
+ * Controller for the PGA2311 audio ic.
+ *
+ * Author: dreimalb
  */
 #include "pga.h"
 

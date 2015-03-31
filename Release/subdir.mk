@@ -8,33 +8,36 @@ C_SRCS += \
 ../irmp.c \
 ../irmpextlog.c \
 ../leds.c \
-../main.c \
 ../motorpot.c \
 ../pga.c \
 ../receiver.c \
-../spi.c 
+../relays.c \
+../spi.c \
+../volumeRemote.c 
 
 OBJS += \
 ./adc.o \
 ./irmp.o \
 ./irmpextlog.o \
 ./leds.o \
-./main.o \
 ./motorpot.o \
 ./pga.o \
 ./receiver.o \
-./spi.o 
+./relays.o \
+./spi.o \
+./volumeRemote.o 
 
 C_DEPS += \
 ./adc.d \
 ./irmp.d \
 ./irmpextlog.d \
 ./leds.d \
-./main.d \
 ./motorpot.d \
 ./pga.d \
 ./receiver.d \
-./spi.d 
+./relays.d \
+./spi.d \
+./volumeRemote.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

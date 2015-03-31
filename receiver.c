@@ -1,3 +1,10 @@
+/*
+ * receiver.c
+ *
+ * Wrapper for the IRMP libs.
+ *
+ * Author: dreimalb
+ */
 #include "receiver.h"
 
 #ifndef F_CPU

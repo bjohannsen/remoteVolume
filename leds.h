@@ -1,18 +1,8 @@
 /*
  * leds.h
  *
- *  Created on: 23.03.2014
- *      Author: BJO
- *
- *      0x0001: (1<<0) Rot, rechts
- *      0x0002: (1<<1) Grün (MAX)
- *      0x0004: (1<<2) Grün... (ccw)
- *      ..
- *		0x2000: (1<<13) Grün (MIN)
- *		0x4000: (1<<14) Rot, links
- *		0x8000: (1<<15) Rot, mitte /mute
+ * Author: dreimalb
  */
-
 #ifndef LEDS_H_
 #define LEDS_H_
 

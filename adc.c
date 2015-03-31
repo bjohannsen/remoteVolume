@@ -1,3 +1,10 @@
+/*
+ * adc.c
+ *
+ * ADC handling. Used to read position of motor pot.
+ *
+ * Author: dreimalb
+ */
 #include "adc.h"
 
 volatile uint16_t _adc_data[ADC_NUM_CHANNELS];

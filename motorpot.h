@@ -1,5 +1,11 @@
+/*
+ * motorpot.h
+ *
+ * Author: dreimalb
+ */
 #ifndef MOTORPOT_H_
 #define MOTORPOT_H_
+
 #include <math.h>
 #include <avr/io.h>
 #include <stdio.h>

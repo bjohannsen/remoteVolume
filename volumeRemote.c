@@ -1,9 +1,14 @@
+/*
+ * volumeRemote.c
+ *
+ * Main file of VolumeRemote project.
+ *
+ * Author: dreimalb
+ */
 #include "volumeRemote.h"
 
-// VolumeRemote Definitions
 uint8_t _state = 0x0;
 uint8_t _flags = 0x0;
-uint8_t _submute_counter = 0;
 uint8_t _gain_level = GAIN_STARTUP_STEP;
 
 // Timer Interrupt
@@ -11,13 +16,7 @@ ISR(TIMER0_COMPA_vect)
 {
 	static uint8_t sw_timer=0;
 
-	if(_submute_counter > 0)
-	{
-		_submute_counter--;
-		if(_submute_counter==0) {
-			RELAY_SUBMUTE_OPEN;
-		}
-	}
+	relays_handle_latches();
 
 	if(sw_timer&0x01)
 	{
@@ -56,21 +55,15 @@ void toggle_source()
 	if(_state & STATE_SECOND_SOURCE)
 	{
 		_state &= ~STATE_SECOND_SOURCE;
-		RELAY_SOURCE_OPEN;
+		relays_set_main_source();
 		leds_clear_second_source();
 	}
 	else
 	{
 		_state |= STATE_SECOND_SOURCE;
-		RELAY_SOURCE_CLOSE;
+		relays_set_second_source();
 		leds_set_second_source();
 	}
-}
-
-void toggle_submute()
-{
-	RELAY_SUBMUTE_CLOSE;
-	_submute_counter = RELAY_SUBMUTE_DELAY;
 }
 
 void turn_volume_up()
@@ -100,11 +93,8 @@ void rx_led_callback(uint8_t on)
 	leds_rx();
 }
 
-void init_io() {
-    RELAY_DDR |= (RELAY_SOURCE|RELAY_SUBMUTE);
-}
-
-void init_volume_timer() {
+void init_volume_timer()
+{
 	TCCR0A = (1<<WGM01);
 	TCCR0B |= (1<<CS02|1<<CS00);
 	OCR0A = 196;
@@ -114,9 +104,9 @@ void init_volume_timer() {
 int main (void)
 {
     init_volume_timer();
-    init_io();
 
     motor_init();
+    relays_init();
     pga_init();
     leds_init(GAIN_STEPS);
     receiver_init(rx_led_callback);
@@ -146,7 +136,7 @@ int main (void)
         	}
         	else if(command == RECEIVER_COMMAND_TOGGLE_SUBWOOFER)
         	{
-        		toggle_submute();
+        		relays_toggle_subwoofer();
         	}
         	else if(command == RECEIVER_COMMAND_TOGGLE_SOURCE)
         	{

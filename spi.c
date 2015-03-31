@@ -1,8 +1,9 @@
 /*
  * spi.c
  *
- *  Created on: 23.03.2014
- *      Author: BJO
+ * Simple software-SPI.
+ *
+ * Author: dreimalb
  */
 #include "spi.h"
 

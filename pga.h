@@ -1,12 +1,11 @@
 /*
  * pga.h
  *
- *  Created on: 05.07.2014
- *      Author: BJO
+ * Author: dreimalb
  */
-
 #ifndef PGA_H_
 #define PGA_H_
+
 #include <avr/io.h>
 #include <stdio.h>
 

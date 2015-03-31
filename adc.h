@@ -1,3 +1,8 @@
+/*
+ * adc.h
+ *
+ * Author: dreimalb
+ */
 #ifndef ADC_HANDLER_H
 #define ADC_HANDLER_H
 

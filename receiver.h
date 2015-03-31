@@ -1,5 +1,11 @@
+/*
+ * receiver.c
+ *
+ * Author: dreimalb
+ */
 #ifndef RECEIVER_H_
 #define RECEIVER_H_
+
 #include "irmp.h"
 
 #define SAMSUNG_CMD_MUTE 		0xF00F

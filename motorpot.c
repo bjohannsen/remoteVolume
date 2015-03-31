@@ -1,3 +1,10 @@
+/*
+ * motorpot.c
+ *
+ * Controlling of motorpot.
+ *
+ * Author: dreimalb
+ */
 #include "motorpot.h"
 
 uint16_t _motor_target = 0;

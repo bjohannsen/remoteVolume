@@ -2,30 +2,16 @@
 #define VOLUMEREMOTE_H_
 
 #include "irmp.h"
+#include "receiver.h"
 #include "adc.h"
 #include "motorpot.h"
 #include "leds.h"
 #include "pga.h"
 
-#define SAMSUNG_CMD_MUTE 		0xF00F
-#define SAMSUNG_CMD_VOL_PLUS	0xF807
-#define SAMSUNG_CMD_VOL_MINUS	0xF40B
-#define SAMSUNG_CMD_A			0x936C
-#define SAMSUNG_CMD_B			0xEB14
-#define SAMSUNG_CMD_C			0xEA15
-#define SAMSUNG_CMD_D			0xE916
-#define SAMSUNG_CMD_PAUSE		0xB54A
-#define SAMSUNG_CMD_BACK		0xBA45
-#define SAMSUNG_CMD_NEXT		0xB748
-#define SAMSUNG_CMD_PLAY		0xB847
-#define SAMSUNG_CMD_STOP		0xB946
-
-#define SAMSUNG_ADDRESS			0x0707
-
 // States
-#define STATE_MUTE				0x01
-#define STATE_SUB_BYPASS		0x02
-#define STATE_SECOND_SOURCE		0x04
+#define STATE_MUTE					0x01
+#define STATE_SUB_BYPASS			0x02
+#define STATE_SECOND_SOURCE			0x04
 
 // Flags
 #define FLAG_CALC_MOTOR_TARGET		0x01

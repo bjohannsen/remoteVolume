@@ -1,54 +1,12 @@
 #include "volumeRemote.h"
 
-#ifndef F_CPU
-#error F_CPU unkown
-#endif
-
-void timer1_init (void)
-{
-#if defined (__AVR_ATtiny45__) || defined (__AVR_ATtiny85__)  // ATtiny45 / ATtiny85:
-
-#if F_CPU >= 16000000L
-    OCR1C   =  (F_CPU / F_INTERRUPTS / 8) - 1;            // compare value: 1/15000 of CPU frequency, presc = 8
-    TCCR1   = (1 << CTC1) | (1 << CS12);                  // switch CTC Mode on, set prescaler to 8
-#else
-    OCR1C   =  (F_CPU / F_INTERRUPTS / 4) - 1;            // compare value: 1/15000 of CPU frequency, presc = 4
-    TCCR1   = (1 << CTC1) | (1 << CS11) | (1 << CS10);    // switch CTC Mode on, set prescaler to 4
-#endif
-
-#else                                                     // ATmegaXX:
-    OCR1A   =  (F_CPU / F_INTERRUPTS) - 1;                // compare value: 1/15000 of CPU frequency
-    TCCR1B  = (1 << WGM12) | (1 << CS10);                 // switch CTC Mode on, set prescaler to 1
-#endif
-
-#ifdef TIMSK1
-    TIMSK1  = 1 << OCIE1A;                      // OCIE1A: Interrupt by timer compare
-#else
-    TIMSK   = 1 << OCIE1A;                      // OCIE1A: Interrupt by timer compare
-#endif
-}
-
-#ifdef TIM1_COMPA_vect                          // ATtiny84
-#define COMPA_VECT  TIM1_COMPA_vect
-#else
-#define COMPA_VECT  TIMER1_COMPA_vect           // ATmega
-#endif
-
 // VolumeRemote Definitions
 uint8_t _state = 0x0;
 uint8_t _flags = 0x0;
 uint8_t _submute_counter = 0;
 uint8_t _gain_level = GAIN_STARTUP_STEP;
 
-
-// IRMP Timer
-// Timer1 output compare A interrupt service routine, called every 1/15000 sec
-ISR(COMPA_VECT)
-{
-  (void) irmp_ISR();
-}
-
-//// Timer Interrupt
+// Timer Interrupt
 ISR(TIMER0_COMPA_vect)
 {
 	static uint8_t sw_timer=0;
@@ -153,57 +111,51 @@ void init_volume_timer() {
 	TIMSK0 |= (1<<OCIE0A);
 }
 
-uint8_t is_repetition(IRMP_DATA irmp_data)
-{
-	return irmp_data.flags & IRMP_FLAG_REPETITION;
-}
-
 int main (void)
 {
     IRMP_DATA irmp_data;
-    motor_init();
-    init_io();
+
     init_volume_timer();
+    init_io();
+
+    motor_init();
     pga_init();
     leds_init(GAIN_STEPS);
-    irmp_init();
-    timer1_init();
-    irmp_set_callback_ptr(rx_led_callback);
-    pga_unmute();
+    receiver_init(rx_led_callback);
 
-    sei ();
     update_pga_gain();
+    pga_unmute();
+    motor_update_target(_gain_level);
 
-    for (;;)
+    sei();
+
+    for(;;)
     {
-        if (irmp_get_data (&irmp_data))
+        if(irmp_get_data (&irmp_data))
         {
-        	if(irmp_data.address == SAMSUNG_ADDRESS)
+        	if(receiver_is_source_valid(irmp_data))
         	{
-        		if((irmp_data.command == SAMSUNG_CMD_MUTE) && !is_repetition(irmp_data))
+          		if(receiver_is_volume_up_command(irmp_data))
+            	{
+            		turn_volume_up();
+            	}
+            	else if(receiver_is_volume_down_command(irmp_data))
+            	{
+            		turn_volume_down();
+            	}
+            	else if(receiver_is_toggle_mute_command(irmp_data))
         		{
         			toggle_mute();
         		}
-        		else if((irmp_data.command == SAMSUNG_CMD_PAUSE) && !is_repetition(irmp_data))
+        		else if(receiver_is_toggle_subwoofer_command(irmp_data))
         		{
        				toggle_submute();
         		}
-        		else if(irmp_data.command == SAMSUNG_CMD_BACK || irmp_data.command == SAMSUNG_CMD_NEXT)
+        		else if(receiver_is_toggle_source_command(irmp_data))
         		{
-        			if(!is_repetition(irmp_data))
-        			{
-        				toggle_source();
-        			}
+       				toggle_source();
         		}
-        		else if(irmp_data.command == SAMSUNG_CMD_VOL_PLUS)
-        		{
-        			turn_volume_up();
-        		}
-        		else if(irmp_data.command == SAMSUNG_CMD_VOL_MINUS)
-        		{
-        			turn_volume_down();
-        		}
-        	}
+          	}
         }
 
         if(_flags & FLAG_CALC_MOTOR_TARGET)

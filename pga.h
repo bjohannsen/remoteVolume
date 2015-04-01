@@ -10,10 +10,10 @@
 #include <stdio.h>
 
 // USER DEFINITIONS
-#define GAIN_MIN			0x70 	// -40dB //MAX: 192 (0xC0)
-#define GAIN_BANDWIDTH		128 	// number of steps (0.5db steps of pga)
+#define GAIN_MIN			100		// -40dB //MAX: 192 (0xC0)
+#define GAIN_BANDWIDTH		168		// number of steps (0.5db steps of pga)
 #define GAIN_STEPWIDTH  	4   	// step width (in 0.5db)
-#define GAIN_STARTUP_STEP 	5
+#define GAIN_STARTUP_STEP 	10
 // END OF USER DEFINTIONS
 
 #define PGA_GAIN_MUTE 0

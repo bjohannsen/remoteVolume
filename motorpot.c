@@ -36,7 +36,7 @@ void motor_init() {
 
 void motor_update_target(uint8_t gain_level)
 {
-	double base = 0.62518 * (double)gain_level;
-	_motor_target = pow(base, 2.55);
+	double base = 0.4763 * (double)gain_level;
+	_motor_target = pow(base, 2.3);
 }
 

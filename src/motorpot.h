@@ -1,7 +1,7 @@
 /*
  * motorpot.h
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #ifndef MOTORPOT_H_
 #define MOTORPOT_H_

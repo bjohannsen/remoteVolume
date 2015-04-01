@@ -15188,7 +15188,7 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="dreimalb">
+<library name="dreimalbe">
 <description>Parts for &lt;b&gt;remoteVolume.brd&lt;/b&gt;&lt;p&gt;
 by dreimalb</description>
 <packages>
@@ -15289,6 +15289,88 @@ by dreimalb</description>
 <wire x1="-12.5" y1="2.2" x2="12.5" y2="2.2" width="0.127" layer="21"/>
 <wire x1="-12.5" y1="7" x2="12.5" y2="7" width="0.127" layer="21"/>
 <wire x1="-12.5" y1="12.8" x2="12.4" y2="12.8" width="0.127" layer="21"/>
+</package>
+<package name="AVR-ISP-10">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;&lt;p&gt; AVR ISP 10 Pin, 0.1" Straight</description>
+<wire x1="10.25" y1="-4.25" x2="10.25" y2="4.25" width="0.5" layer="21"/>
+<wire x1="10.25" y1="4.25" x2="-10.25" y2="4.25" width="0.5" layer="21"/>
+<wire x1="-10.25" y1="4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
+<pad name="1" x="-5.08" y="-1.27" drill="1.016" shape="square"/>
+<pad name="2" x="-5.08" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="3" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="4" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="5" x="0" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="6" x="0" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="7" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="8" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="9" x="5.08" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="10" x="5.08" y="1.27" drill="1.016" shape="octagon"/>
+<text x="-10.45" y="-6.245" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-10.25" y="4.675" size="1.27" layer="27" ratio="12">&gt;VALUE</text>
+<rectangle x1="-5.334" y1="-1.524" x2="-4.826" y2="-1.016" layer="51"/>
+<rectangle x1="-5.334" y1="1.016" x2="-4.826" y2="1.524" layer="51"/>
+<rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
+<rectangle x1="-2.794" y1="-1.524" x2="-2.286" y2="-1.016" layer="51"/>
+<rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
+<rectangle x1="-0.254" y1="-1.524" x2="0.254" y2="-1.016" layer="51"/>
+<rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
+<rectangle x1="2.286" y1="-1.524" x2="2.794" y2="-1.016" layer="51"/>
+<rectangle x1="4.826" y1="1.016" x2="5.334" y2="1.524" layer="51"/>
+<rectangle x1="4.826" y1="-1.524" x2="5.334" y2="-1.016" layer="51"/>
+<wire x1="-2.15" y1="-4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
+<wire x1="10.25" y1="-4.25" x2="2.15" y2="-4.25" width="0.5" layer="21"/>
+</package>
+<package name="AVR-ISP-10R">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;&lt;p&gt; AVR ISP 10 Pin, 0.1" Right Angle</description>
+<wire x1="6.35" y1="-3.175" x2="3.81" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="3.81" y1="-5.715" x2="6.35" y2="-5.715" width="0.254" layer="21"/>
+<wire x1="6.35" y1="-5.715" x2="6.35" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="5.08" y1="-12.065" x2="5.08" y2="-6.35" width="0.762" layer="51"/>
+<wire x1="3.81" y1="-3.175" x2="1.27" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="1.27" y1="-5.715" x2="3.81" y2="-5.715" width="0.254" layer="21"/>
+<wire x1="2.54" y1="-12.065" x2="2.54" y2="-6.35" width="0.762" layer="51"/>
+<wire x1="1.27" y1="-3.175" x2="-1.27" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-1.27" y1="-5.715" x2="1.27" y2="-5.715" width="0.254" layer="21"/>
+<wire x1="0" y1="-12.065" x2="0" y2="-6.35" width="0.762" layer="51"/>
+<wire x1="-1.27" y1="-3.175" x2="-3.81" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="-5.715" x2="-1.27" y2="-5.715" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="-12.065" x2="-2.54" y2="-6.35" width="0.762" layer="51"/>
+<wire x1="-3.81" y1="-3.175" x2="-6.35" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-6.35" y1="-3.175" x2="-6.35" y2="-5.715" width="0.254" layer="21"/>
+<wire x1="-6.35" y1="-5.715" x2="-3.81" y2="-5.715" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="-12.065" x2="-5.08" y2="-6.35" width="0.762" layer="51"/>
+<pad name="2" x="-5.08" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="4" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="6" x="0" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="8" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="10" x="5.08" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="1" x="-5.08" y="-1.27" drill="1.016" shape="square"/>
+<pad name="3" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="5" x="0" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="7" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="9" x="5.08" y="-1.27" drill="1.016" diameter="1.4224" shape="octagon"/>
+<text x="6.985" y="-1.27" size="1.27" layer="25" ratio="12" rot="R270">&gt;NAME</text>
+<text x="-8.255" y="-1.27" size="1.27" layer="27" ratio="12" rot="R270">&gt;VALUE</text>
+<rectangle x1="4.699" y1="-6.223" x2="5.461" y2="-5.715" layer="51" rot="R180"/>
+<rectangle x1="2.159" y1="-6.223" x2="2.921" y2="-5.715" layer="51" rot="R180"/>
+<rectangle x1="-0.381" y1="-6.223" x2="0.381" y2="-5.715" layer="51" rot="R180"/>
+<rectangle x1="-2.921" y1="-6.223" x2="-2.159" y2="-5.715" layer="51" rot="R180"/>
+<rectangle x1="-5.461" y1="-6.223" x2="-4.699" y2="-5.715" layer="51" rot="R180"/>
+<rectangle x1="4.699" y1="-3.175" x2="5.461" y2="-2.159" layer="21" rot="R180"/>
+<rectangle x1="2.159" y1="-3.175" x2="2.921" y2="-2.159" layer="21" rot="R180"/>
+<rectangle x1="4.699" y1="-0.381" x2="5.461" y2="0.381" layer="21" rot="R180"/>
+<rectangle x1="4.699" y1="-2.159" x2="5.461" y2="-0.381" layer="51" rot="R180"/>
+<rectangle x1="2.159" y1="-2.159" x2="2.921" y2="-0.381" layer="51" rot="R180"/>
+<rectangle x1="2.159" y1="-0.381" x2="2.921" y2="0.381" layer="21" rot="R180"/>
+<rectangle x1="-0.381" y1="-3.175" x2="0.381" y2="-2.159" layer="21" rot="R180"/>
+<rectangle x1="-2.921" y1="-3.175" x2="-2.159" y2="-2.159" layer="21" rot="R180"/>
+<rectangle x1="-0.381" y1="-0.381" x2="0.381" y2="0.381" layer="21" rot="R180"/>
+<rectangle x1="-0.381" y1="-2.159" x2="0.381" y2="-0.381" layer="51" rot="R180"/>
+<rectangle x1="-2.921" y1="-2.159" x2="-2.159" y2="-0.381" layer="51" rot="R180"/>
+<rectangle x1="-2.921" y1="-0.381" x2="-2.159" y2="0.381" layer="21" rot="R180"/>
+<rectangle x1="-5.461" y1="-3.175" x2="-4.699" y2="-2.159" layer="21" rot="R180"/>
+<rectangle x1="-5.461" y1="-0.381" x2="-4.699" y2="0.381" layer="21" rot="R180"/>
+<rectangle x1="-5.461" y1="-2.159" x2="-4.699" y2="-0.381" layer="51" rot="R180"/>
 </package>
 <package name="FE10-2W">
 <description>&lt;b&gt;FEMALE HEADER&lt;/b&gt;</description>
@@ -15393,88 +15475,6 @@ by dreimalb</description>
 <rectangle x1="-6.6802" y1="0.4064" x2="-6.0198" y2="1.5748" layer="51"/>
 <rectangle x1="-9.2202" y1="0.4064" x2="-8.5598" y2="1.5748" layer="51"/>
 <rectangle x1="-11.7602" y1="0.4064" x2="-11.0998" y2="1.5748" layer="51"/>
-</package>
-<package name="AVR-ISP-10">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;&lt;p&gt; AVR ISP 10 Pin, 0.1" Straight</description>
-<wire x1="10.25" y1="-4.25" x2="10.25" y2="4.25" width="0.5" layer="21"/>
-<wire x1="10.25" y1="4.25" x2="-10.25" y2="4.25" width="0.5" layer="21"/>
-<wire x1="-10.25" y1="4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
-<pad name="1" x="-5.08" y="-1.27" drill="1.016" shape="square"/>
-<pad name="2" x="-5.08" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="3" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="4" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="5" x="0" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="6" x="0" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="7" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="8" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="9" x="5.08" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="10" x="5.08" y="1.27" drill="1.016" shape="octagon"/>
-<text x="-10.45" y="-6.245" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-10.25" y="4.675" size="1.27" layer="27" ratio="12">&gt;VALUE</text>
-<rectangle x1="-5.334" y1="-1.524" x2="-4.826" y2="-1.016" layer="51"/>
-<rectangle x1="-5.334" y1="1.016" x2="-4.826" y2="1.524" layer="51"/>
-<rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
-<rectangle x1="-2.794" y1="-1.524" x2="-2.286" y2="-1.016" layer="51"/>
-<rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
-<rectangle x1="-0.254" y1="-1.524" x2="0.254" y2="-1.016" layer="51"/>
-<rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
-<rectangle x1="2.286" y1="-1.524" x2="2.794" y2="-1.016" layer="51"/>
-<rectangle x1="4.826" y1="1.016" x2="5.334" y2="1.524" layer="51"/>
-<rectangle x1="4.826" y1="-1.524" x2="5.334" y2="-1.016" layer="51"/>
-<wire x1="-2.15" y1="-4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
-<wire x1="10.25" y1="-4.25" x2="2.15" y2="-4.25" width="0.5" layer="21"/>
-</package>
-<package name="AVR-ISP-10R">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;&lt;p&gt; AVR ISP 10 Pin, 0.1" Right Angle</description>
-<wire x1="6.35" y1="-3.175" x2="3.81" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="3.81" y1="-5.715" x2="6.35" y2="-5.715" width="0.254" layer="21"/>
-<wire x1="6.35" y1="-5.715" x2="6.35" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="5.08" y1="-12.065" x2="5.08" y2="-6.35" width="0.762" layer="51"/>
-<wire x1="3.81" y1="-3.175" x2="1.27" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="1.27" y1="-5.715" x2="3.81" y2="-5.715" width="0.254" layer="21"/>
-<wire x1="2.54" y1="-12.065" x2="2.54" y2="-6.35" width="0.762" layer="51"/>
-<wire x1="1.27" y1="-3.175" x2="-1.27" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-1.27" y1="-5.715" x2="1.27" y2="-5.715" width="0.254" layer="21"/>
-<wire x1="0" y1="-12.065" x2="0" y2="-6.35" width="0.762" layer="51"/>
-<wire x1="-1.27" y1="-3.175" x2="-3.81" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="-5.715" x2="-1.27" y2="-5.715" width="0.254" layer="21"/>
-<wire x1="-2.54" y1="-12.065" x2="-2.54" y2="-6.35" width="0.762" layer="51"/>
-<wire x1="-3.81" y1="-3.175" x2="-6.35" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-6.35" y1="-3.175" x2="-6.35" y2="-5.715" width="0.254" layer="21"/>
-<wire x1="-6.35" y1="-5.715" x2="-3.81" y2="-5.715" width="0.254" layer="21"/>
-<wire x1="-5.08" y1="-12.065" x2="-5.08" y2="-6.35" width="0.762" layer="51"/>
-<pad name="2" x="-5.08" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="4" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="6" x="0" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="8" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="10" x="5.08" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="1" x="-5.08" y="-1.27" drill="1.016" shape="square"/>
-<pad name="3" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="5" x="0" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="7" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="9" x="5.08" y="-1.27" drill="1.016" diameter="1.4224" shape="octagon"/>
-<text x="6.985" y="-1.27" size="1.27" layer="25" ratio="12" rot="R270">&gt;NAME</text>
-<text x="-8.255" y="-1.27" size="1.27" layer="27" ratio="12" rot="R270">&gt;VALUE</text>
-<rectangle x1="4.699" y1="-6.223" x2="5.461" y2="-5.715" layer="51" rot="R180"/>
-<rectangle x1="2.159" y1="-6.223" x2="2.921" y2="-5.715" layer="51" rot="R180"/>
-<rectangle x1="-0.381" y1="-6.223" x2="0.381" y2="-5.715" layer="51" rot="R180"/>
-<rectangle x1="-2.921" y1="-6.223" x2="-2.159" y2="-5.715" layer="51" rot="R180"/>
-<rectangle x1="-5.461" y1="-6.223" x2="-4.699" y2="-5.715" layer="51" rot="R180"/>
-<rectangle x1="4.699" y1="-3.175" x2="5.461" y2="-2.159" layer="21" rot="R180"/>
-<rectangle x1="2.159" y1="-3.175" x2="2.921" y2="-2.159" layer="21" rot="R180"/>
-<rectangle x1="4.699" y1="-0.381" x2="5.461" y2="0.381" layer="21" rot="R180"/>
-<rectangle x1="4.699" y1="-2.159" x2="5.461" y2="-0.381" layer="51" rot="R180"/>
-<rectangle x1="2.159" y1="-2.159" x2="2.921" y2="-0.381" layer="51" rot="R180"/>
-<rectangle x1="2.159" y1="-0.381" x2="2.921" y2="0.381" layer="21" rot="R180"/>
-<rectangle x1="-0.381" y1="-3.175" x2="0.381" y2="-2.159" layer="21" rot="R180"/>
-<rectangle x1="-2.921" y1="-3.175" x2="-2.159" y2="-2.159" layer="21" rot="R180"/>
-<rectangle x1="-0.381" y1="-0.381" x2="0.381" y2="0.381" layer="21" rot="R180"/>
-<rectangle x1="-0.381" y1="-2.159" x2="0.381" y2="-0.381" layer="51" rot="R180"/>
-<rectangle x1="-2.921" y1="-2.159" x2="-2.159" y2="-0.381" layer="51" rot="R180"/>
-<rectangle x1="-2.921" y1="-0.381" x2="-2.159" y2="0.381" layer="21" rot="R180"/>
-<rectangle x1="-5.461" y1="-3.175" x2="-4.699" y2="-2.159" layer="21" rot="R180"/>
-<rectangle x1="-5.461" y1="-0.381" x2="-4.699" y2="0.381" layer="21" rot="R180"/>
-<rectangle x1="-5.461" y1="-2.159" x2="-4.699" y2="-0.381" layer="51" rot="R180"/>
 </package>
 <package name="RCA-2">
 <description>&lt;b&gt;RCA JACK DIP R/A 4pos&lt;/b&gt;&lt;p&gt;
@@ -15636,6 +15636,44 @@ Source: RCA-4-117-01x.pdf</description>
 <wire x1="17.78" y1="-27.94" x2="17.78" y2="27.94" width="0.254" layer="94"/>
 <wire x1="17.78" y1="27.94" x2="-17.78" y2="27.94" width="0.254" layer="94"/>
 </symbol>
+<symbol name="AVR-ISP-10">
+<wire x1="-6.35" y1="-7.62" x2="6.35" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="6.35" y1="-7.62" x2="6.35" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="6.35" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="-1.905" y1="5.08" x2="-1.27" y2="5.08" width="1.016" layer="94"/>
+<wire x1="-1.905" y1="2.54" x2="-1.27" y2="2.54" width="1.016" layer="94"/>
+<wire x1="-1.905" y1="0" x2="-1.27" y2="0" width="1.016" layer="94"/>
+<wire x1="-1.905" y1="-2.54" x2="-1.27" y2="-2.54" width="1.016" layer="94"/>
+<wire x1="-1.905" y1="-5.08" x2="-1.27" y2="-5.08" width="1.016" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="1.905" y2="5.08" width="1.016" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.905" y2="2.54" width="1.016" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.905" y2="0" width="1.016" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.905" y2="-2.54" width="1.016" layer="94"/>
+<wire x1="1.27" y1="-5.08" x2="1.905" y2="-5.08" width="1.016" layer="94"/>
+<text x="-6.35" y="8.89" size="1.778" layer="95" ratio="10">&gt;NAME</text>
+<text x="-6.35" y="-10.795" size="1.778" layer="94" ratio="10">AVR ISP</text>
+<text x="7.62" y="0.635" size="1.143" layer="94" ratio="10">MOSI</text>
+<text x="7.62" y="-1.905" size="1.143" layer="94" ratio="10">MISO</text>
+<text x="7.62" y="-4.445" size="1.143" layer="94" ratio="10">SCK</text>
+<text x="7.62" y="3.175" size="1.143" layer="94" ratio="10">RST</text>
+<text x="7.62" y="5.715" size="1.143" layer="94" ratio="10">VTG</text>
+<text x="-11.43" y="5.715" size="1.143" layer="94" ratio="10">GND</text>
+<text x="-11.43" y="3.175" size="1.143" layer="94" ratio="10">GND</text>
+<text x="-11.43" y="0.635" size="1.143" layer="94" ratio="10">GND</text>
+<text x="-11.43" y="-1.905" size="1.143" layer="94" ratio="10">GND</text>
+<text x="-11.43" y="-4.445" size="1.143" layer="94" ratio="10">GND</text>
+<pin name="7" x="5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="8" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
+<pin name="1" x="5.08" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="3" x="-5.08" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="9" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="4" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="6" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="5" x="5.08" y="2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="10" x="-5.08" y="-5.08" visible="pad" length="short" direction="pas"/>
+</symbol>
 <symbol name="FE10-2">
 <wire x1="3.81" y1="-12.7" x2="-3.81" y2="-12.7" width="0.4064" layer="94"/>
 <wire x1="-1.905" y1="-5.715" x2="-1.905" y2="-4.445" width="0.254" layer="94" curve="-180" cap="flat"/>
@@ -15683,44 +15721,6 @@ Source: RCA-4-117-01x.pdf</description>
 <pin name="19" x="-7.62" y="12.7" visible="pad" length="middle" direction="pas" swaplevel="1"/>
 <pin name="18" x="7.62" y="10.16" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="20" x="7.62" y="12.7" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-</symbol>
-<symbol name="AVR-ISP-10">
-<wire x1="-6.35" y1="-7.62" x2="6.35" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="6.35" y1="-7.62" x2="6.35" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="6.35" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="-1.905" y1="5.08" x2="-1.27" y2="5.08" width="1.016" layer="94"/>
-<wire x1="-1.905" y1="2.54" x2="-1.27" y2="2.54" width="1.016" layer="94"/>
-<wire x1="-1.905" y1="0" x2="-1.27" y2="0" width="1.016" layer="94"/>
-<wire x1="-1.905" y1="-2.54" x2="-1.27" y2="-2.54" width="1.016" layer="94"/>
-<wire x1="-1.905" y1="-5.08" x2="-1.27" y2="-5.08" width="1.016" layer="94"/>
-<wire x1="1.27" y1="5.08" x2="1.905" y2="5.08" width="1.016" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="1.905" y2="2.54" width="1.016" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.905" y2="0" width="1.016" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.905" y2="-2.54" width="1.016" layer="94"/>
-<wire x1="1.27" y1="-5.08" x2="1.905" y2="-5.08" width="1.016" layer="94"/>
-<text x="-6.35" y="8.89" size="1.778" layer="95" ratio="10">&gt;NAME</text>
-<text x="-6.35" y="-10.795" size="1.778" layer="94" ratio="10">AVR ISP</text>
-<text x="7.62" y="0.635" size="1.143" layer="94" ratio="10">MOSI</text>
-<text x="7.62" y="-1.905" size="1.143" layer="94" ratio="10">MISO</text>
-<text x="7.62" y="-4.445" size="1.143" layer="94" ratio="10">SCK</text>
-<text x="7.62" y="3.175" size="1.143" layer="94" ratio="10">RST</text>
-<text x="7.62" y="5.715" size="1.143" layer="94" ratio="10">VTG</text>
-<text x="-11.43" y="5.715" size="1.143" layer="94" ratio="10">GND</text>
-<text x="-11.43" y="3.175" size="1.143" layer="94" ratio="10">GND</text>
-<text x="-11.43" y="0.635" size="1.143" layer="94" ratio="10">GND</text>
-<text x="-11.43" y="-1.905" size="1.143" layer="94" ratio="10">GND</text>
-<text x="-11.43" y="-4.445" size="1.143" layer="94" ratio="10">GND</text>
-<pin name="7" x="5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R180"/>
-<pin name="8" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
-<pin name="1" x="5.08" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
-<pin name="3" x="-5.08" y="5.08" visible="pad" length="short" direction="pas"/>
-<pin name="9" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" rot="R180"/>
-<pin name="4" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
-<pin name="2" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R180"/>
-<pin name="6" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
-<pin name="5" x="5.08" y="2.54" visible="pad" length="short" direction="pas" rot="R180"/>
-<pin name="10" x="-5.08" y="-5.08" visible="pad" length="short" direction="pas"/>
 </symbol>
 <symbol name="CINCH2">
 <wire x1="-2.54" y1="-2.54" x2="1.016" y2="-2.54" width="0.1524" layer="94"/>
@@ -15774,46 +15774,6 @@ Source: RCA-4-117-01x.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="FE10-2W" prefix="SV" uservalue="yes">
-<description>&lt;b&gt;FEMALE HEADER&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="FE10-2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="FE10-2W">
-<connects>
-<connect gate="1" pin="1" pad="1"/>
-<connect gate="1" pin="10" pad="10"/>
-<connect gate="1" pin="11" pad="11"/>
-<connect gate="1" pin="12" pad="12"/>
-<connect gate="1" pin="13" pad="13"/>
-<connect gate="1" pin="14" pad="14"/>
-<connect gate="1" pin="15" pad="15"/>
-<connect gate="1" pin="16" pad="16"/>
-<connect gate="1" pin="17" pad="17"/>
-<connect gate="1" pin="18" pad="18"/>
-<connect gate="1" pin="19" pad="19"/>
-<connect gate="1" pin="2" pad="2"/>
-<connect gate="1" pin="20" pad="20"/>
-<connect gate="1" pin="3" pad="3"/>
-<connect gate="1" pin="4" pad="4"/>
-<connect gate="1" pin="5" pad="5"/>
-<connect gate="1" pin="6" pad="6"/>
-<connect gate="1" pin="7" pad="7"/>
-<connect gate="1" pin="8" pad="8"/>
-<connect gate="1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="AVR-ISP-10" prefix="JP">
 <description>&lt;b&gt;AVR ISP-10&lt;/b&gt;&lt;p&gt; Serial Programming Header</description>
 <gates>
@@ -15852,6 +15812,46 @@ Source: RCA-4-117-01x.pdf</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FE10-2W" prefix="SV" uservalue="yes">
+<description>&lt;b&gt;FEMALE HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="FE10-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FE10-2W">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="10" pad="10"/>
+<connect gate="1" pin="11" pad="11"/>
+<connect gate="1" pin="12" pad="12"/>
+<connect gate="1" pin="13" pad="13"/>
+<connect gate="1" pin="14" pad="14"/>
+<connect gate="1" pin="15" pad="15"/>
+<connect gate="1" pin="16" pad="16"/>
+<connect gate="1" pin="17" pad="17"/>
+<connect gate="1" pin="18" pad="18"/>
+<connect gate="1" pin="19" pad="19"/>
+<connect gate="1" pin="2" pad="2"/>
+<connect gate="1" pin="20" pad="20"/>
+<connect gate="1" pin="3" pad="3"/>
+<connect gate="1" pin="4" pad="4"/>
+<connect gate="1" pin="5" pad="5"/>
+<connect gate="1" pin="6" pad="6"/>
+<connect gate="1" pin="7" pad="7"/>
+<connect gate="1" pin="8" pad="8"/>
+<connect gate="1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -15908,12 +15908,12 @@ Source: RCA-4-117-01x.pdf</description>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="C8" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="47u"/>
 <part name="X_IN" library="con-conrad" deviceset="RCA-4-117-01" device=""/>
-<part name="JP4" library="dreimalb" deviceset="AVR-ISP-10" device=""/>
-<part name="U$1" library="dreimalb" deviceset="RK16816MG" device=""/>
+<part name="JP4" library="dreimalbe" deviceset="AVR-ISP-10" device=""/>
+<part name="U$1" library="dreimalbe" deviceset="RK16816MG" device=""/>
 <part name="IC1" library="atmel" deviceset="MEGA8-P" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="VCC" device=""/>
-<part name="X_OUT" library="dreimalb" deviceset="RCA-2" device=""/>
+<part name="X_OUT" library="dreimalbe" deviceset="RCA-2" device=""/>
 <part name="T3" library="transistor" deviceset="BC337" device=""/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="0207/7" value="2k"/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
@@ -15922,7 +15922,7 @@ Source: RCA-4-117-01x.pdf</description>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="C10" library="rcl" deviceset="C-EU" device="025-025X050" value="100n"/>
-<part name="SV2" library="dreimalb" deviceset="FE10-2W" device=""/>
+<part name="SV2" library="dreimalbe" deviceset="FE10-2W" device=""/>
 <part name="IC4" library="burr-brown" deviceset="OPA2132" device="P"/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="0207/7" value="2k"/>
 <part name="GND16" library="supply1" deviceset="GNDIO" device=""/>

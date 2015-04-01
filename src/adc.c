@@ -3,7 +3,7 @@
  *
  * ADC handling. Used to read position of motor pot.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "adc.h"
 

@@ -3,7 +3,7 @@
  *
  * Wrapper for the IRMP libs.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "receiver.h"
 

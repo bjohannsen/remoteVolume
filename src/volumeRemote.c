@@ -3,7 +3,7 @@
  *
  * Main file of VolumeRemote project.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "volumeRemote.h"
 

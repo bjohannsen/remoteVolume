@@ -3,7 +3,7 @@
  *
  * Controlling of motorpot.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "motorpot.h"
 

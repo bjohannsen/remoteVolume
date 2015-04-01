@@ -75,7 +75,7 @@
 <rectangle x1="58.1025" y1="53.0225" x2="60.96" y2="53.975" layer="42" rot="R135"/>
 <rectangle x1="61.595" y1="60.325" x2="64.4525" y2="61.2775" layer="42"/>
 <text x="96.2025" y="8.89" size="1.778" layer="1" font="vector" ratio="14" rot="R90">RemoteVolume</text>
-<text x="99.06" y="8.89" size="1.778" layer="1" font="vector" ratio="14" rot="R90">dreimalb 2014</text>
+<text x="99.06" y="8.89" size="1.778" layer="1" font="vector" ratio="14" rot="R90">@dreimalbe 2014</text>
 </plain>
 <libraries>
 <library name="rcl">
@@ -806,7 +806,7 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 </package>
 </packages>
 </library>
-<library name="dreimalb">
+<library name="dreimalbe">
 <description>Parts for &lt;b&gt;remoteVolume.brd&lt;/b&gt;&lt;p&gt;
 by dreimalb</description>
 <packages>
@@ -907,6 +907,36 @@ by dreimalb</description>
 <wire x1="-12.5" y1="2.2" x2="12.5" y2="2.2" width="0.127" layer="21"/>
 <wire x1="-12.5" y1="7" x2="12.5" y2="7" width="0.127" layer="21"/>
 <wire x1="-12.5" y1="12.8" x2="12.4" y2="12.8" width="0.127" layer="21"/>
+</package>
+<package name="AVR-ISP-10">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;&lt;p&gt; AVR ISP 10 Pin, 0.1" Straight</description>
+<wire x1="10.25" y1="-4.25" x2="10.25" y2="4.25" width="0.5" layer="21"/>
+<wire x1="10.25" y1="4.25" x2="-10.25" y2="4.25" width="0.5" layer="21"/>
+<wire x1="-10.25" y1="4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
+<pad name="1" x="-5.08" y="-1.27" drill="1.016" shape="square"/>
+<pad name="2" x="-5.08" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="3" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="4" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="5" x="0" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="6" x="0" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="7" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="8" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="9" x="5.08" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="10" x="5.08" y="1.27" drill="1.016" shape="octagon"/>
+<text x="-10.45" y="-6.245" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-10.25" y="4.675" size="1.27" layer="27" ratio="12">&gt;VALUE</text>
+<rectangle x1="-5.334" y1="-1.524" x2="-4.826" y2="-1.016" layer="51"/>
+<rectangle x1="-5.334" y1="1.016" x2="-4.826" y2="1.524" layer="51"/>
+<rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
+<rectangle x1="-2.794" y1="-1.524" x2="-2.286" y2="-1.016" layer="51"/>
+<rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
+<rectangle x1="-0.254" y1="-1.524" x2="0.254" y2="-1.016" layer="51"/>
+<rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
+<rectangle x1="2.286" y1="-1.524" x2="2.794" y2="-1.016" layer="51"/>
+<rectangle x1="4.826" y1="1.016" x2="5.334" y2="1.524" layer="51"/>
+<rectangle x1="4.826" y1="-1.524" x2="5.334" y2="-1.016" layer="51"/>
+<wire x1="-2.15" y1="-4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
+<wire x1="10.25" y1="-4.25" x2="2.15" y2="-4.25" width="0.5" layer="21"/>
 </package>
 <package name="FE10-2W">
 <description>&lt;b&gt;FEMALE HEADER&lt;/b&gt;</description>
@@ -1011,36 +1041,6 @@ by dreimalb</description>
 <rectangle x1="-6.6802" y1="0.4064" x2="-6.0198" y2="1.5748" layer="51"/>
 <rectangle x1="-9.2202" y1="0.4064" x2="-8.5598" y2="1.5748" layer="51"/>
 <rectangle x1="-11.7602" y1="0.4064" x2="-11.0998" y2="1.5748" layer="51"/>
-</package>
-<package name="AVR-ISP-10">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;&lt;p&gt; AVR ISP 10 Pin, 0.1" Straight</description>
-<wire x1="10.25" y1="-4.25" x2="10.25" y2="4.25" width="0.5" layer="21"/>
-<wire x1="10.25" y1="4.25" x2="-10.25" y2="4.25" width="0.5" layer="21"/>
-<wire x1="-10.25" y1="4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
-<pad name="1" x="-5.08" y="-1.27" drill="1.016" shape="square"/>
-<pad name="2" x="-5.08" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="3" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="4" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="5" x="0" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="6" x="0" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="7" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="8" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="9" x="5.08" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="10" x="5.08" y="1.27" drill="1.016" shape="octagon"/>
-<text x="-10.45" y="-6.245" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-10.25" y="4.675" size="1.27" layer="27" ratio="12">&gt;VALUE</text>
-<rectangle x1="-5.334" y1="-1.524" x2="-4.826" y2="-1.016" layer="51"/>
-<rectangle x1="-5.334" y1="1.016" x2="-4.826" y2="1.524" layer="51"/>
-<rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
-<rectangle x1="-2.794" y1="-1.524" x2="-2.286" y2="-1.016" layer="51"/>
-<rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
-<rectangle x1="-0.254" y1="-1.524" x2="0.254" y2="-1.016" layer="51"/>
-<rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
-<rectangle x1="2.286" y1="-1.524" x2="2.794" y2="-1.016" layer="51"/>
-<rectangle x1="4.826" y1="1.016" x2="5.334" y2="1.524" layer="51"/>
-<rectangle x1="4.826" y1="-1.524" x2="5.334" y2="-1.016" layer="51"/>
-<wire x1="-2.15" y1="-4.25" x2="-10.25" y2="-4.25" width="0.5" layer="21"/>
-<wire x1="10.25" y1="-4.25" x2="2.15" y2="-4.25" width="0.5" layer="21"/>
 </package>
 <package name="RCA-2">
 <description>&lt;b&gt;RCA JACK DIP R/A 4pos&lt;/b&gt;&lt;p&gt;
@@ -1328,20 +1328,20 @@ design rules under a new name.</description>
 <element name="JP2" library="pinhead" package="1X02" value="" x="53.0225" y="22.86" rot="R90"/>
 <element name="C8" library="rcl" package="E2,5-6" value="47u" x="24.765" y="9.525" rot="R90"/>
 <element name="X_IN" library="con-conrad" package="RCA-4-117-01" value="RCA-4-117-01" x="77.1525" y="70.1675"/>
-<element name="JP4" library="dreimalb" package="AVR-ISP-10" value="AVR-ISP-10" x="11.43" y="10.4775" rot="R180"/>
-<element name="U$1" library="dreimalb" package="RK16816MG" value="RK16816MG" x="80.9625" y="8.255"/>
+<element name="JP4" library="dreimalbe" package="AVR-ISP-10" value="AVR-ISP-10" x="11.43" y="10.4775" rot="R180"/>
+<element name="U$1" library="dreimalbe" package="RK16816MG" value="RK16816MG" x="80.9625" y="8.255"/>
 <element name="IC1" library="atmel" package="DIL28-3" value="MEGA8-P" x="22.86" y="20.6375" rot="R180">
 <attribute name="OC_NEWARK" value="unknown" x="22.86" y="20.6375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="22.86" y="20.6375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="22.86" y="20.6375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="22.86" y="20.6375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="X_OUT" library="dreimalb" package="RCA-2" value="RCA-2" x="50.4825" y="70.1675"/>
+<element name="X_OUT" library="dreimalbe" package="RCA-2" value="RCA-2" x="50.4825" y="70.1675"/>
 <element name="T3" library="transistor" package="TO92" value="BC337" x="36.83" y="29.21" rot="R90"/>
 <element name="R4" library="rcl" package="0207/7" value="2k" x="31.75" y="30.7975" rot="R270"/>
 <element name="C9" library="rcl" package="C025-025X050" value="100n" x="24.4475" y="13.6525"/>
 <element name="C10" library="rcl" package="C025-025X050" value="100n" x="26.67" y="28.8925" rot="R90"/>
-<element name="SV2" library="dreimalb" package="FE10-2W" value="" x="40" y="10.37">
+<element name="SV2" library="dreimalbe" package="FE10-2W" value="" x="40" y="10.37">
 <attribute name="OC_NEWARK" value="unknown" x="40" y="10.37" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="40" y="10.37" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="40" y="10.37" size="1.778" layer="27" display="off"/>

@@ -3,7 +3,7 @@
  *
  * Controller for the PGA2311 audio ic.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "pga.h"
 

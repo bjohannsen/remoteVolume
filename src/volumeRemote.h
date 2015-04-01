@@ -1,7 +1,7 @@
 /*
  * volumeRemote.h
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #ifndef VOLUMEREMOTE_H_
 #define VOLUMEREMOTE_H_

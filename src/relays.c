@@ -3,7 +3,7 @@
  *
  * Wrapper to handle subwoofer mute and source relays.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "relays.h"
 

@@ -1,7 +1,7 @@
 /*
  * relay.h
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #ifndef RELAYS_H_
 #define RELAYS_H_

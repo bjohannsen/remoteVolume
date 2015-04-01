@@ -1,7 +1,7 @@
 /*
  * spi.h
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #ifndef SPI_H_
 #define SPI_H_

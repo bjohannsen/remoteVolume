@@ -1,7 +1,7 @@
 /*
  * leds.h
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #ifndef LEDS_H_
 #define LEDS_H_

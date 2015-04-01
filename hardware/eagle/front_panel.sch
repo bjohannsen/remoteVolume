@@ -3676,7 +3676,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="dreimalb">
+<library name="dreimalbe">
 <description>Parts for &lt;b&gt;remoteVolume.brd&lt;/b&gt;&lt;p&gt;
 by dreimalb</description>
 <packages>
@@ -4450,7 +4450,7 @@ by dreimalb</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="SV2" library="con-lstb" deviceset="MA10-2" device=""/>
 <part name="R17" library="resistor" deviceset="R-EU_" device="0207/7" value="100"/>
-<part name="U$2" library="dreimalb" deviceset="LED_RING_16" device=""/>
+<part name="U$2" library="dreimalbe" deviceset="LED_RING_16" device=""/>
 <part name="U$3" library="tsop-1" deviceset="TSOP1738" device=""/>
 </parts>
 <sheets>

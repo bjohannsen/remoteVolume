@@ -1,12 +1,12 @@
 /*
  * receiver.c
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #ifndef RECEIVER_H_
 #define RECEIVER_H_
 
-#include "irmp.h"
+#include "irmp/irmp.h"
 
 #define SAMSUNG_CMD_MUTE 		0xF00F
 #define SAMSUNG_CMD_VOL_PLUS	0xF807

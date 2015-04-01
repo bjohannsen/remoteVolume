@@ -1,7 +1,7 @@
 /*
  * pga.h
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #ifndef PGA_H_
 #define PGA_H_

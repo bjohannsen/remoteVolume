@@ -3,7 +3,7 @@
  *
  * Handling of front leds.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "leds.h"
 

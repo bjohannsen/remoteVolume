@@ -3,7 +3,7 @@
  *
  * Simple software-SPI.
  *
- * Author: dreimalb
+ * Author: @dreimalbe
  */
 #include "spi.h"
 

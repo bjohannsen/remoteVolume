@@ -29,7 +29,12 @@ ISR(TIMER0_COMPA_vect)
 
 void update_pga_gain()
 {
-	pga_set_gain(pga_get_gain_for_level(_gain_level));
+	uint8_t gain = _gain_level;
+	if(_state & STATE_SECOND_SOURCE)
+	{
+		gain += SECOND_SOURCE_INPUT_GAIN;
+	}
+	pga_set_gain(pga_get_gain_for_level(gain));
 }
 
 void toggle_mute()
@@ -64,6 +69,7 @@ void toggle_source()
 		relays_set_second_source();
 		leds_set_second_source();
 	}
+	update_pga_gain();
 }
 
 void turn_volume_up()
@@ -112,6 +118,7 @@ int main (void)
     receiver_init(rx_led_callback);
 
     update_pga_gain();
+    toggle_source();
     pga_unmute();
     motor_update_target(_gain_level);
 

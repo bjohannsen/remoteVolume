@@ -72,7 +72,10 @@ uint8_t is_volume_down_command(IRMP_DATA irmp_data)
 
 uint8_t is_toggle_source_command(IRMP_DATA irmp_data)
 {
-	return (irmp_data.command == SAMSUNG_CMD_BACK || irmp_data.command == SAMSUNG_CMD_NEXT) && !is_repetition(irmp_data);
+	return (irmp_data.command == SAMSUNG_CMD_BACK
+				|| irmp_data.command == SAMSUNG_CMD_NEXT
+				|| irmp_data.command == SAMSUNG_CMD_POWER)
+			&& !is_repetition(irmp_data);
 }
 
 uint8_t is_toggle_subwoofer_command(IRMP_DATA irmp_data)

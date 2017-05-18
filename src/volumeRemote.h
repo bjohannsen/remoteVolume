@@ -23,4 +23,6 @@
 #define FLAG_LED_ANIMATION			0x02
 #define FLAG_CHECK_MOTOR_POSTION 	0x04
 
+#define SECOND_SOURCE_INPUT_GAIN	4	// number of level steps to add for this source.
+
 #endif /* VOLUMEREMOTE_H_ */

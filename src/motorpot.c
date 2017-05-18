@@ -24,7 +24,9 @@ void motor_check_position(uint16_t adc_value)
 	{
 		MOTOR_RUN_CW;
 	}
-	else if(adc_value < _motor_target-adc_tolerance)
+	// here is wrap around trouble if _motor_target < 0.
+	//else if(adc_value < _motor_target-adc_tolerance)
+	else if(_motor_target > adc_tolerance && adc_value < _motor_target-adc_tolerance)
 	{
 		MOTOR_RUN_CCW;
 	}

@@ -9,15 +9,14 @@
 #include <avr/io.h>
 #include <stdio.h>
 
-// USER DEFINITIONS
-#define GAIN_MIN			100		// -40dB //MAX: 192 (0xC0)
-#define GAIN_BANDWIDTH		168		// number of steps (0.5db steps of pga)
-#define GAIN_STEPWIDTH  	4   	// step width (in 0.5db)
-#define GAIN_STARTUP_STEP 	10
-// END OF USER DEFINTIONS
-
 #define PGA_GAIN_MUTE 0
 #define PGA_GAIN_MAX 255
+
+// USER DEFINITIONS
+#define GAIN_MIN			110		// min volume. 110 of 255.
+#define GAIN_STEPWIDTH  	3   	// step width (in 0.5db)
+#define GAIN_STARTUP_STEP 	11		//
+// END OF USER DEFINTIONS
 
 #define PGA_MUTE_PIN		(1<<PORTD5)
 #define PGA_UNMUTE 			(PGA_SPI_PORT |= PGA_MUTE_PIN)
@@ -40,6 +39,7 @@
 #define PGA_SPI_INIT_SCK_PIN (PGA_SPI_DDR |= PGA_SPI_PIN_SCK)
 #define PGA_SPI_INIT_CS_PIN  (PGA_SPI_DDR |= PGA_SPI_PIN_CS)
 
+#define GAIN_BANDWIDTH		(PGA_GAIN_MAX-GAIN_MIN)		// number of steps (0.5db steps of pga)
 #define GAIN_STEPS			(GAIN_BANDWIDTH/GAIN_STEPWIDTH)
 #define GAIN_MAX 			(GAIN_MIN+(GAIN_STEPS*GAIN_STEPWIDTH))
 

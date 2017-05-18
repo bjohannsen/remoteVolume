@@ -43,7 +43,7 @@ uint16_t leds_map_gain_values_and_states(uint8_t gain_level)
 		if(gain_level >= leds_get_threshold(index))
 		{
 			value |= (1<<index);
-			_leds_highest = index-1;
+			_leds_highest = index;
 		}
 	}
 	if(_leds_state & LEDS_STATE_SECOND_SOURCE)
@@ -69,6 +69,7 @@ uint16_t leds_map_gain_values_and_states(uint8_t gain_level)
 		}
 		_leds_rx_counter--;
 	}
+
 	return value;
 }
 
@@ -88,15 +89,15 @@ void leds_clear_values()
 	{
 		_leds_values &= ~(1<<index);
 	}
+	_leds_values |= (1<<_leds_highest);
 }
 
 void leds_animation_mute()
 {
-	static uint8_t index = LEDS_INDEX_MAX+1;
-
-	//for(; index <= LEDS_INDEX_MAX; index++);
+	static uint8_t runner = 0;
 
 	uint8_t i = LEDS_INDEX_MIN;
+	uint8_t index = (_leds_highest+runner);
 	if(index <= LEDS_INDEX_MIN)
 	{
 		_leds_animations |= LEDS_ANIMATION_MUTED;
@@ -107,12 +108,12 @@ void leds_animation_mute()
 				_leds_values |= (1<<i);
 			}
 		}
-		index++;
+		runner++;
 	}
 	else
 	{
 		_leds_animations &= ~LEDS_ANIMATION_MUTE;
-		index = LEDS_INDEX_MAX;
+		runner = 0;
 	}
 }
 

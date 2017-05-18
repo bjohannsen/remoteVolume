@@ -8,6 +8,7 @@
 
 #include "irmp/irmp.h"
 
+#define SAMSUNG_CMD_POWER		0xFD02
 #define SAMSUNG_CMD_MUTE 		0xF00F
 #define SAMSUNG_CMD_VOL_PLUS	0xF807
 #define SAMSUNG_CMD_VOL_MINUS	0xF40B
